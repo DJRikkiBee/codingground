@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html  dir="ltr" lang="en-us" xml:lang="en-us">
+<head>
+    <title>CS1044 S16: Midterm Topic List</title>
+    <link rel="shortcut icon" href="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/theme/1439527119/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, CS1044 S16: Midterm Topic List" />
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.7.3/build/cssreset/reset-min.css&amp;3.7.3/build/cssfonts/fonts-min.css&amp;3.7.3/build/cssgrids/grids-min.css&amp;3.7.3/build/cssbase/base-min.css" /><script type="text/javascript" src="http://yui.yahooapis.com/combo?3.7.3/build/simpleyui/simpleyui-min.js&amp;3.7.3/build/loader/loader-min.js"></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="http://moodle.cs.vt.edu/theme/styles.php/bbytefusionmod/1439527119/all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+var moodleConfigFn = function(me) {var p = me.path, b = me.name.replace(/^moodle-/,'').split('-', 3), n = b.pop();if (/(skin|core)/.test(n)) {n = b.pop();me.type = 'css';};me.path = b.join('-')+'/'+n+'/'+n+'.'+me.type;};
+var galleryConfigFn = function(me) {var p = me.path,v=M.yui.galleryversion,f;if(/-(skin|core)/.test(me.name)) {me.type = 'css';p = p.replace(/-(skin|core)/, '').replace(/\.js/, '.css').split('/'), f = p.pop().replace(/(\-(min|debug))/, '');if (/-skin/.test(me.name)) {p.splice(p.length,0,v,'assets','skins','sam', f);} else {p.splice(p.length,0,v,'assets', f);};} else {p = p.split('/'), f = p.pop();p.splice(p.length,0,v, f);};me.path = p.join('/');};
+var yui2in3ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin');}};
+YUI_config = {"base":"http:\/\/yui.yahooapis.com\/3.7.3\/build\/","comboBase":"http:\/\/yui.yahooapis.com\/combo?","combine":true,"filter":"","insertBefore":"firstthemesheet","modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"http:\/\/moodle.cs.vt.edu\/lib\/javascript.php\/1439525862\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","moodle-core_filepicker"]},"core_dock":{"name":"core_dock","fullpath":"http:\/\/moodle.cs.vt.edu\/lib\/javascript.php\/1439525862\/blocks\/dock.js","requires":["base","node","event-custom","event-mouseenter","event-resize"]}},"groups":{"moodle":{"name":"moodle","base":"http:\/\/moodle.cs.vt.edu\/theme\/yui_combo.php?moodle\/1439525862\/","comboBase":"http:\/\/moodle.cs.vt.edu\/theme\/yui_combo.php?","combine":true,"filter":"","ext":false,"root":"moodle\/1439525862\/","patterns":{"moodle-":{"group":"moodle","configFn":moodleConfigFn}}},"local":{"name":"gallery","base":"http:\/\/moodle.cs.vt.edu\/lib\/yui\/gallery\/","comboBase":"http:\/\/moodle.cs.vt.edu\/theme\/yui_combo.php?","combine":true,"filter":"","ext":false,"root":"gallery\/","patterns":{"gallery-":{"group":"gallery","configFn":galleryConfigFn}}},"yui2":{"base":"http:\/\/moodle.cs.vt.edu\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"http:\/\/moodle.cs.vt.edu\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui2in3ConfigFn}}}}};
+M.yui.loader = {modules: {}};
+M.cfg = {"wwwroot":"http:\/\/moodle.cs.vt.edu","sesskey":"0lq1jvGumd","loadingicon":"http:\/\/moodle.cs.vt.edu\/theme\/image.php\/bbytefusionmod\/core\/1439527119\/i\/loading_small","themerev":"1439527119","slasharguments":1,"theme":"bbytefusionmod","jsrev":"1439525862","svgicons":true};
+//]]>
+</script>
+<script type="text/javascript" src="http://moodle.cs.vt.edu/lib/javascript.php/1439525862/lib/javascript-static.js"></script>
+<script type="text/javascript" src="http://moodle.cs.vt.edu/theme/javascript.php/bbytefusionmod/1439527119/head"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript"></script>
+<script src="/codemirror/lib/codemirror.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/codemirror/lib/codemirror.css"/>
+<link rel="stylesheet" href="/codemirror/theme/railscasts.css"/>
+<script type="text/javascript">
+  $(function() {
+    $("pre").each(function() {
+      var codeNode = this;
+      var body = codeNode.innerText || codeNode.textContent;
+      if (body != null) { body = body.replace(/(\r?\n|\r)\s*$/, ''); }
+      CodeMirror(function(newEditor) {
+        $(codeNode).replaceWith(newEditor);
+      }, {
+        value: body,
+        theme: 'railscasts',
+        mode: $(codeNode).data('lang') || 'text/x-java',
+        readOnly: true,
+        lineNumbers: $(codeNode).hasClass('lineNumbers') || !$(codeNode).hasClass('noLineNumbers')
+      });
+    });
+  });
+</script>
+<style type="text/css">
+.CodeMirror { border: 1px solid #bbb; margin: 1em auto; line-height: 1.2em; }
+.CodeMirror-scroll { height: auto; overflow: visible; }
+code { font-size: 1em; }
+</style></head>
+
+<body id="page-mod-page-view" class="format-weeks  path-mod path-mod-page safari dir-ltr lang-en_us yui-skin-sam yui3-skin-sam moodle-cs-vt-edu pagelayout-incourse course-301 context-55936 cmid-37155 category-53 side-post-only">
+<div class="skiplinks"><a class="skip" href="#maincontent">Skip to main content</a></div>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page">
+
+	
+	<div id="page-wrap1">
+		<div id="page-wrap2">
+
+   			<div id="wrapper" class="clearfix">
+
+<!-- START OF HEADER -->
+
+		    	<div id="page-header" class="inside">
+					<div id="page-header-wrapper" class="wrapper clearfix">
+
+			        					    	    <div id="headermenus" class="clearfix">
+								<div class="headermenu">
+				        			<div class="logininfo">You are logged in as <a href="http://moodle.cs.vt.edu/user/profile.php?id=12103">Rickey Barnes</a> (<a href="http://moodle.cs.vt.edu/login/logout.php?sesskey=0lq1jvGumd">Logout</a>)</div>					        	</div>
+		    				    									<div id="custommenu" style="line-height:1em;">&nbsp;</div> <!-- temporary until I find a better fix -->
+												            </div>
+		    		    
+			    	</div>
+				</div>
+
+<!-- END OF HEADER -->
+
+	
+
+<!-- START OF CONTENT -->
+
+		<div id="page-content-wrapper" class="wrapper clearfix">
+		    <div id="page-content">
+    		    <div id="region-main-box">
+        		    <div id="region-post-box">
+
+	            	    <div id="region-main-wrap">
+    	            	    <div id="region-main">
+        	            	    <div class="region-content">
+
+									<div id="region-header" class="inside">
+							    	    <h1 class="headermain">CS 1044 Intro to Programming in C++</h1>
+							    	</div>
+
+						    	    						        	    <div class="navbar">
+						            		<div class="wrapper clearfix">
+							            	    <div class="breadcrumb">
+							            	    	<span class="accesshide">Page path</span><ul role="navigation"><li><a title="Home" href="http://moodle.cs.vt.edu/">Home</a></li><li> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&rang;</span> <a title="CS 1044 Intro to Programming in C++" href="http://moodle.cs.vt.edu/course/view.php?id=301">CS1044 S16</a></li><li> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&rang;</span> <span tabindex="0"> February 29 -  March 6</span></li><li> <span class="accesshide " ><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">&rang;</span> <a title="Page" href="http://moodle.cs.vt.edu/mod/page/view.php?id=37155"><span class="update">Midterm Topic List</span></a></li></ul>							            	    </div>
+							    	            <div class="navbutton">
+							    	            								    	            </div>
+								    	    </div>
+							    	    </div>
+						        	
+            	            	    <span id="maincontent"></span><div class="box generalbox center clearfix"><div class="no-overflow"><p>The following is a list of topics that might appear on the midterm. After each topic is the set of notes  where those topics are discussed.</p>
+<ul>
+<li>Syntax and semantics (Notes 2)</li>
+<li>Primitive data types (int, double, char, bool) (Notes 3)</li>
+<li>Strings (Notes 3)</li>
+<li>Variable declarations (Notes 3)</li>
+<li>Basic arithmetic expressions (Notes 3)</li>
+<li><code>int</code> vs. <code>double</code> arithmetic (Notes 3)</li>
+<li>Type casting (Notes 3)</li>
+<li>Named constants (Notes 3)</li>
+<li>Assignment statements (Notes 3)</li>
+<li>Basic output with <code>cout</code> (Notes 4)</li>
+<li>Reading input with <code>cin</code> (Notes 4)</li>
+<li>Boolean logic, conditions, relational and logical operators (Notes 6)</li>
+<li><code>if</code>/<code>else</code> statements (Notes 6)</li>
+<li><code>while</code> loops (Notes 7)</li>
+<li><code>for</code> loops (Notes 7)</li>
+<li>Functions (Notes 8)</li>
+<li>Parameter passing modes (Notes 9)</li>
+</ul></div></div><div class="modified">Last modified: Tuesday, March 1, 2016, 8:54 PM</div>	                	        </div>
+    	                	</div>
+	    	            </div>
+
+		                    		            <div id="region-post" class="block-region">
+        	    	    	<div id="region-post-wrap-1">
+        	    	    		<div id="region-post-wrap-2">
+		        		            <div class="region-content">
+    		        		            <a href="#sb-1" class="skip-block">Skip Navigation</a><div id="inst5521" class="block_navigation  block" role="navigation" aria-labelledby="instance-5521-header"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-5521-header">Navigation</h2></div></div><div class="content"><ul class="block_tree list"><li class="type_unknown depth_1 contains_branch" aria-expanded="true"><p class="tree_item branch canexpand navigation_node"><a title="Home" href="http://moodle.cs.vt.edu/">Home</a></p><ul><li class="type_setting depth_2 item_with_icon"><p class="tree_item leaf hasicon"><a title="My home" href="http://moodle.cs.vt.edu/my/"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />My home</a></p></li>
+<li class="type_user depth_2 collapsed contains_branch" aria-expanded="false"><p class="tree_item branch"><span tabindex="0">My profile</span></p><ul><li class="type_custom depth_3 item_with_icon"><p class="tree_item leaf hasicon"><a title="View profile" href="http://moodle.cs.vt.edu/user/profile.php?id=12103"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />View profile</a></p></li>
+<li class="type_unknown depth_3 collapsed contains_branch" aria-expanded="false"><p class="tree_item branch"><span tabindex="0">Blogs</span></p><ul><li class="type_custom depth_4 item_with_icon"><p class="tree_item leaf hasicon"><a title="View all of my entries" href="http://moodle.cs.vt.edu/blog/index.php?userid=12103"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />View all of my entries</a></p></li>
+<li class="type_custom depth_4 item_with_icon"><p class="tree_item leaf hasicon"><a title="Add a new entry" href="http://moodle.cs.vt.edu/blog/edit.php?action=add"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />Add a new entry</a></p></li>
+<li class="type_setting depth_4 item_with_icon"><p class="tree_item leaf hasicon"><a title="Blog RSS feed" href="http://moodle.cs.vt.edu/rss/file.php/1/8c5f5c29cd7bf1fb6260dd894ddd3a76/blog/user/12103/rss.xml"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/rss" />Blog RSS feed</a></p></li></ul></li>
+<li class="type_setting depth_3 item_with_icon"><p class="tree_item leaf hasicon"><a title="Messages" href="http://moodle.cs.vt.edu/message/index.php"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />Messages</a></p></li>
+<li class="type_setting depth_3 item_with_icon"><p class="tree_item leaf hasicon"><a title="My private files" href="http://moodle.cs.vt.edu/user/files.php"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />My private files</a></p></li></ul></li>
+<li class="type_system depth_2 contains_branch" aria-expanded="true"><p class="tree_item branch"><span tabindex="0">Current course</span></p><ul><li class="type_course depth_3 contains_branch" aria-expanded="true"><p class="tree_item branch"><a title="CS 1044 Intro to Programming in C++" href="http://moodle.cs.vt.edu/course/view.php?id=301">CS1044 S16</a></p><ul><li class="type_unknown depth_4 collapsed contains_branch" aria-expanded="false"><p class="tree_item branch"><a title="Participants" href="http://moodle.cs.vt.edu/user/index.php?id=301">Participants</a></p><ul><li class="type_custom depth_5 item_with_icon"><p class="tree_item leaf hasicon"><a title="Course blogs" href="http://moodle.cs.vt.edu/blog/index.php?courseid=301"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />Course blogs</a></p></li>
+<li class="type_user depth_5 collapsed contains_branch" aria-expanded="false"><p class="tree_item branch"><a title="Rickey Barnes" href="http://moodle.cs.vt.edu/user/view.php?id=12103&amp;course=301">Rickey Barnes</a></p><ul><li class="type_custom depth_6 item_with_icon"><p class="tree_item leaf hasicon"><a title="View profile" href="http://moodle.cs.vt.edu/user/view.php?id=12103&amp;course=301"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />View profile</a></p></li>
+<li class="type_unknown depth_6 collapsed contains_branch" aria-expanded="false"><p class="tree_item branch"><span tabindex="0">Blogs</span></p><ul><li class="type_custom depth_7 item_with_icon"><p class="tree_item leaf hasicon"><a title="View all of my entries" href="http://moodle.cs.vt.edu/blog/index.php?userid=12103"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />View all of my entries</a></p></li>
+<li class="type_custom depth_7 item_with_icon"><p class="tree_item leaf hasicon"><a title="Add a new entry" href="http://moodle.cs.vt.edu/blog/edit.php?action=add"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />Add a new entry</a></p></li>
+<li class="type_setting depth_7 item_with_icon"><p class="tree_item leaf hasicon"><a title="Blog RSS feed" href="http://moodle.cs.vt.edu/rss/file.php/1/8c5f5c29cd7bf1fb6260dd894ddd3a76/blog/user/12103/rss.xml"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/rss" />Blog RSS feed</a></p></li></ul></li>
+<li class="type_setting depth_6 item_with_icon"><p class="tree_item leaf hasicon"><a title="Messages" href="http://moodle.cs.vt.edu/message/index.php"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />Messages</a></p></li>
+<li class="type_setting depth_6 item_with_icon"><p class="tree_item leaf hasicon"><a title="My private files" href="http://moodle.cs.vt.edu/user/files.php"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />My private files</a></p></li></ul></li></ul></li>
+<li class="type_structure depth_4 contains_branch" aria-expanded="true"><p class="tree_item branch"><span tabindex="0"> February 29 -  March 6</span></p><ul><li class="type_activity depth_5 item_with_icon current_branch"><p class="tree_item leaf hasicon active_tree_node"><a title="Page" href="http://moodle.cs.vt.edu/mod/page/view.php?id=37155"><img alt="Page" class="smallicon navicon" title="Page" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/page/1439527119/icon" /><span class="update">Midterm Topic List</span></a></p></li></ul></li></ul></li></ul></li>
+<li class="type_system depth_2 collapsed contains_branch" aria-expanded="false"><p class="tree_item branch" id="expandable_branch_1"><a title="My courses" href="http://moodle.cs.vt.edu/my">My courses</a></p></li></ul></li></ul></div></div><span id="sb-1" class="skip-block-to"></span><a href="#sb-2" class="skip-block">Skip Settings</a><div id="inst5522" class="block_settings  block" role="navigation" aria-labelledby="instance-5522-header"><div class="header"><div class="title"><div class="block_action"></div><h2 id="instance-5522-header">Settings</h2></div></div><div class="content"><div id="settingsnav" class="box block_tree_box"><ul class="block_tree list"><li class="type_course collapsed contains_branch" aria-expanded="false"><p class="tree_item branch root_node"><span tabindex="0">Course administration</span></p><ul><li class="type_setting collapsed item_with_icon"><p class="tree_item leaf"><a title="Unenroll me from CS1044 S16" href="http://moodle.cs.vt.edu/enrol/self/unenrolself.php?enrolid=696"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/user" />Unenroll me from CS1044 S16</a></p></li></ul></li>
+<li class="type_unknown collapsed contains_branch" aria-expanded="false"><hr /><p class="tree_item branch root_node" id="usersettings"><span tabindex="0">My profile settings</span></p><ul><li class="type_setting collapsed item_with_icon"><p class="tree_item leaf"><a title="Edit profile" href="http://moodle.cs.vt.edu/user/edit.php?id=12103&amp;course=301"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />Edit profile</a></p></li>
+<li class="type_setting collapsed item_with_icon"><p class="tree_item leaf"><a title="Change password" href="http://my.vt.edu"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />Change password</a></p></li>
+<li class="type_setting collapsed item_with_icon"><p class="tree_item leaf"><a title="Security keys" href="http://moodle.cs.vt.edu/user/managetoken.php?sesskey=0lq1jvGumd"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />Security keys</a></p></li>
+<li class="type_setting collapsed item_with_icon"><p class="tree_item leaf"><a title="Messaging" href="http://moodle.cs.vt.edu/message/edit.php?id=12103"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />Messaging</a></p></li>
+<li class="type_unknown collapsed contains_branch" aria-expanded="false"><p class="tree_item branch"><span tabindex="0">Blogs</span></p><ul><li class="type_setting collapsed item_with_icon"><p class="tree_item leaf"><a title="Preferences" href="http://moodle.cs.vt.edu/blog/preferences.php"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />Preferences</a></p></li>
+<li class="type_setting collapsed item_with_icon"><p class="tree_item leaf"><a title="External blogs" href="http://moodle.cs.vt.edu/blog/external_blogs.php"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />External blogs</a></p></li>
+<li class="type_setting collapsed item_with_icon"><p class="tree_item leaf"><a title="Register an external blog" href="http://moodle.cs.vt.edu/blog/external_blog_edit.php"><img alt="" class="smallicon navicon" title="" src="http://moodle.cs.vt.edu/theme/image.php/bbytefusionmod/core/1439527119/i/navigationitem" />Register an external blog</a></p></li></ul></li></ul></li></ul></div></div></div><span id="sb-2" class="skip-block-to"></span>        		        		    </div>
+        		        		</div>
+        		       		</div>
+	                	</div>
+	    	            
+    	    	    </div>
+	    	    </div>
+	    	</div>
+    	</div>
+
+<!-- END OF CONTENT -->
+
+			</div>
+
+		</div>
+	</div>
+
+
+	
+<!-- START OF FOOTER -->
+
+    			    <div id="page-footer" class="wrapper">
+		    	 <!-- There was no custom footnote set -->        		<p class="helplink"></p>
+		        <div class="logininfo">You are logged in as <a href="http://moodle.cs.vt.edu/user/profile.php?id=12103">Rickey Barnes</a> (<a href="http://moodle.cs.vt.edu/login/logout.php?sesskey=0lq1jvGumd">Logout</a>)</div><div class="homelink"><a href="http://moodle.cs.vt.edu/course/view.php?id=301">CS1044 S16</a></div>		    </div>
+	    
+</div>
+<script type="text/javascript" src="http://moodle.cs.vt.edu/theme/javascript.php/bbytefusionmod/1439527119/footer"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","viewallcourses":"View all courses","cancel":"Cancel","yes":"Yes"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source"},"block":{"addtodock":"Move this to the dock","undockitem":"Undock this item","undockall":"Undock all","hidedockpanel":"Hide the dock panel","hidepanel":"Hide panel"},"langconfig":{"thisdirectionvertical":"btt"},"admin":{"confirmation":"Confirmation"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+var navtreeexpansions5521 = [{"id":"expandable_branch_1","key":"mycourses","type":0}];
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+YUI().use('node', function(Y) {
+M.util.load_flowplayer();
+setTimeout("fix_column_widths()", 20);
+Y.config.gallery="2010.04.08-12-35";Y.use("core_dock","moodle-block_navigation-navigation",function() {M.block_navigation.init_add_tree({"id":"5521","instance":"5521","candock":false,"courselimit":"20","expansionlimit":"20"});
+});
+Y.config.gallery="2010.04.08-12-35";Y.use("core_dock","moodle-block_navigation-navigation",function() {M.block_navigation.init_add_tree({"id":"5522","instance":"5522","candock":false});
+});
+M.util.help_popups.setup(Y);
+M.util.init_block_hider(Y, {"id":"inst5521","title":"Navigation","preference":"block5521hidden","tooltipVisible":"Hide Navigation block","tooltipHidden":"Show Navigation block"});
+M.util.init_block_hider(Y, {"id":"inst5522","title":"Settings","preference":"block5522hidden","tooltipVisible":"Hide Settings block","tooltipHidden":"Show Settings block"});
+
+});
+//]]>
+</script>
+</body>
+</html>
